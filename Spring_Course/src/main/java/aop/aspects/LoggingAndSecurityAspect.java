@@ -49,18 +49,18 @@ public class LoggingAndSecurityAspect {
 //    }
 
 
-    @Pointcut("execution(* get*())")
-    private void allGetMethods() {}
-
-    @Before("allGetMethods()")
-    public void beforeGetLoggingAdvice() {
-        System.out.println("beforeGetLoggingAdvice: логирование попытки получить книгу/журнал");
-    }
-
-    @Before("allGetMethods()")
-    public void beforeGetSecurityAdvice() {
-        System.out.println("beforeGetSecurityAdvice: проверка прав на получение книги/журнала");
-    }
+//    @Pointcut("execution(* get*())")
+//    private void allGetMethods() {}
+//
+//    @Before("allGetMethods()")
+//    public void beforeGetLoggingAdvice() {
+//        System.out.println("beforeGetLoggingAdvice: логирование попытки получить книгу/журнал");
+//    }
+//
+//    @Before("allGetMethods()")
+//    public void beforeGetSecurityAdvice() {
+//        System.out.println("beforeGetSecurityAdvice: проверка прав на получение книги/журнала");
+//    }
 
 
 }
