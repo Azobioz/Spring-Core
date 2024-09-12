@@ -2,6 +2,7 @@ package aop.aspects;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -15,4 +16,6 @@ public class ExceptionHandlingAspect {
         System.out.println("beforeAddExceptionHandlingAdvice: ловим/обрабатываем исключение при попытке получить книгу/журнал");
         System.out.println("---------------------------------------------------------------------------------");
     }
+
+
 }
