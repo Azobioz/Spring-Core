@@ -1,15 +1,15 @@
 package hibernate_test.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="employees")
 public class Employee {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY) // полагается на авто увеличение столбца по правилам, прописаных в бд
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE) полагается на работу Sequence, создных в бд (С mySQL не будет работать)
+//    @GeneratedValue(strategy=GenerationType.AUTO) дефолтный тип. будет зависеть от тиа базы данных, с которым будет работать
     @Column(name="id")
     private int id;
 
